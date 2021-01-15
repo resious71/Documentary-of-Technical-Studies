@@ -1,0 +1,48 @@
+Cloud Native 01
+
+■ Cloud Computing
+    - 1965년 미국의 컴퓨터 학자인 존 매카시가 "컴퓨터 환경은 공공 시설을 쓰는 것과도 같을 것"이라는 개념을 제시
+    - 장점: 초기 구입비용과 지출이 적으며 휴대성이 높다. 다양한 단말기를 사용 가능, 서비스를 통한 일관성 있는 UX 구현, 사용자 데이터를 신뢰성 높은 서버에 보관 (안전성)
+              빠른 시작과 확장성, 하드웨어 관리로 부터의 자유로움, 자동 백업, 로드 밸런싱 등 높은 편리성
+    - 단점: 서버 공격에 취약, 데이터 손상을 위한 백업, 애플리케이션에 제약, 물리적인 호스트 정보 파악 불가
+             애플리케이션 성능, 전송량에 따른 비용 초과 가능성, 데이터의 적절성(개인 정보), 특정 클라우드 서비스에 종속 (Lock in)
+■ Cloud Native 
+     - A new computing paradigm that is optimized for modern distributed systems environments capable of scaling to tens of thousands of self healing multi-tenant nodes
+     - Cloud Native is structuring teams, culture, and technology to utilize automation and architectures to manage complexity and unlock velocity
+     - Pre-requisitions : DevOps, Continuous Delivery, Microservices, Cotainers
+  
+
+
+■ Why Cloud Native ?
+   - 경쟁우위, 유연성, 개발자 동기, 운영과 비즈니스 정렬
+   - 초창기 물리 서버 관리의 어려움(시간/비용 문제) --> 가상화 (서버 활용성 증가, APP 이식성 증가에도 가상화에도 물리 서버는 필요) 
+      --> IaaS (비즈니스와 인프라의 관계가 변화, 인프라를 사용량만큼 비용 지불, 관리는 필요: 물리적인 관리 이슈 외에도 모니터링, 운영에 관련한 이슈는 존재)
+      --> PaaS (인프라 관리를 플랫폼 업체가 담당, 애플리케이션 작성 방법이 변경됨 - 앱 개발 주기가 빨라짐 : 구글 앱 엔진, AWS 람다, MS 애저)
+
+
+  
+■ Cloud Native Infrastructure
+  - 추상화 된 인프라 (IaaS)
+  - API에 의해 제어되고, 소프트웨어에 의해 관리되며, 애플리케이션의 실행이 목적 (확장성/효율성)
+  - SW에 의해 관리되는 인프라 (전통적인 인프라 관리 방식과 다름)
+  - 클라우드 네이티브는 퍼브릭 클라우드에서 인프라를 실행하는 것 이상임
+      + 컨테이너 상의 애플리케이션 실행을 의미하지 않음
+      + 쿠버네티스/메소스 같은 컨테이너오케스레이터의 실행만 의미하지도 않음
+      + MSA나 IaC가 아님 (IaC는 자동화에는 유용함)
+      + 구성 관리 도구 (관리에는 사람이 필요 , 사람이 병목지점이 됨, 자동화에는 유용하지만 애플리케이션 관리에는 큰 도움이 되지 않음)
+
+■ Cloud Native Application
+   - 플랫폼 상에서 실행 --> 회복성, 기민성, 운영 및 관측 가능성을 갖춤
+   - 가져야 하는 바람직한 특성 
+      + 마이크로서비스 : 계약 기반의 소규모 서비스 
+      + 정상 상태 보고(health check) : 운영성 향상 
+      + 측정 데이터 : SLI나 KPI 로 비즈니스 목표와 관련 (모니터링 도구 필요, 이상 시 경고 발생)
+      + 회복성 : 장애 극복이 가능하도록 장애 상황에 대해 설계 시 고려,(Graceful degradation)
+      + 선언적, 비 반응적 : 전통적인 애플리케이션과 다른 방식으로 인프라나 지원 애플리케이션과 상호작용
+ 
+■ 결론
+   - 클라우드 네이티브 애플리케이션을 실행하는 인프라스트럭처는 전통적인 방식과는 다르다. 
+      + 인프라에서 처리하던 책임이 애플리케이션으로 이동
+   - 클라우드 네이티브 애플리케이션은 작은 서비스로 분해되어 복잡성에 대응한다.
+
+      + 서비스 확산과 수명주기 관리를 위한 전용 도구가 필요하다. 
