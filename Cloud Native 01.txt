@@ -6,6 +6,13 @@ Cloud Native 01
               빠른 시작과 확장성, 하드웨어 관리로 부터의 자유로움, 자동 백업, 로드 밸런싱 등 높은 편리성
     - 단점: 서버 공격에 취약, 데이터 손상을 위한 백업, 애플리케이션에 제약, 물리적인 호스트 정보 파악 불가
              애플리케이션 성능, 전송량에 따른 비용 초과 가능성, 데이터의 적절성(개인 정보), 특정 클라우드 서비스에 종속 (Lock in)
+    - 5가지 기본 특성
+         + 온디맨드 셀프 서비스
+         + 유비쿼터스 네트워크 접속
+         + 위치가 투명한 리소스 풀링
+         + 신속한 탄력성
+         + 서비스 사용량 측정과 과금
+             
 ■ Cloud Native 
      - A new computing paradigm that is optimized for modern distributed systems environments capable of scaling to tens of thousands of self healing multi-tenant nodes
      - Cloud Native is structuring teams, culture, and technology to utilize automation and architectures to manage complexity and unlock velocity
