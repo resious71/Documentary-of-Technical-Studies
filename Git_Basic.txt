@@ -1,0 +1,47 @@
+Git03
+
+■ Git 
+    git config --global user.name "사용자이름"
+    git config --global user.email "사용자이메일"
+
+    git init          저장소 생성, 실행한 위치를 Git 저장소로 초기화
+    git add [file]   저장소에 파일 추가 , 해당 파일을 Git이 추적할 수 있게 저장소에 추가
+    git commit     저장소에 수정 내역 제출, 변경된 파일을 저장소에 제출
+    git status       저장소 상태 확인 , 현재 저장소의 상태를 출력
+
+    (파일 생성, 추가) --> (파일 수정) --> (수정 내역을 저장소에 제출)
+
+    git branch [br]   저장소에 브랜치 추가, 'br'로 브랜치 생성
+    git checkout [br]  작업중인 브랜치 변경, 현재 작업 중인 브랜치를 'br'로 변경
+    git merge [br]  현재 작업 중인 브랜치에 'br' 브랜치를 끌어와 병합 
+
+   (브랜치 생성) --> (임시 브랜치로 체크아웃) -->  
+   (파일 생성, 추가) --> (파일 수정) --> (수정 내역을 저장소에 제출) -->
+   (원래의 master 브랜치로 체크아웃) --> master 브랜치에 임시 브랜치를 합침
+
+  git log -p  각 커밋에 적용된 실제 변경 내용을 보여준다.
+  git log --stat  각 커밋에서 수정된 파일의 통계 정보를 보여준다.
+  git log --graph  브랜치 분기와 병합 내용을 아스키 그래프로 보여준다. 
+
+■ Git 
+  git clone     원격 저장소의 모든 내용을 로컬 저장소로 복사
+                   git clone https://github.com/github/{username}/repository.git
+                   - local 저장소에서 init 불필요
+
+  git remote  로컬 저장소를 특정 원격 저장소와 연결
+                   git remote add {repo.alias} https://github.com/github/{username}/repository.git
+                   - local 저장소에서 init 필요
+                   확인 시, git remote -v                   
+
+  git push     로컬 저장소의 내용을 보내거나 로컬 저장소의 변경 사항을 원격 저장소로 보냄
+                  git push --all
+                  git 원격저장소 별치 로컬브랜치명 // 브랜치가 있으면 변경하고 없으면 생성한다.
+                  git push origin master
+
+  git fetch     로컬 저장소와 원격 저장소의 변경 사항이 다를 때 이를 비교/대조하고 git merge 명령어와 함께 
+                  최신 데이터를 반영하거나 충돌 문제 등을 해결
+                  git diff 브랜치이름   // 로컬 저장소 브랜치와 원격 저장소 브랜치의 차이 확인
+
+  git pull      git remote 명령을 통해 서로 연결된 원격 저장소의 최신 내용을 로컬 저장소로 가져오면서 병합
+                  git push와 반대 명령어
+                  git pull origin master
