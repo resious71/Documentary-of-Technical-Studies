@@ -1,4 +1,4 @@
-Git03
+Git03/04   // Git Basic Commands
 
 ■ Git 
     git config --global user.name "사용자이름"
@@ -45,3 +45,4 @@ Git03
   git pull      git remote 명령을 통해 서로 연결된 원격 저장소의 최신 내용을 로컬 저장소로 가져오면서 병합
                   git push와 반대 명령어
                   git pull origin master
+                  
