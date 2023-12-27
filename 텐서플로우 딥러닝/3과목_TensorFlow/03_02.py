@@ -52,6 +52,13 @@
 #    > activate tensorflowcpu     #(base) --> (tensorflowcpu)
 # 5. tensorflow 설치 
 #    > pip install tensorflow
+
+###########################################
+# 환경 설정
+HTTP_PROXY = http:// xxxxx
+HTTPS_PROXY = http:// xxxxx
+REQUESTS_CA_UNDLE=C:/../../../XXX.crt
+###########################################
 # 6. 정상 설치 확인
 #    > python                     # 3.6 버전으로 실행
 #    > import tensorflow as tf
@@ -60,6 +67,17 @@
 #    > sess = tf.Session()
 #    > sess.run(a+b)
 #    > ^Z
+
+##########################################
+import tensorflow as tf
+# Tensor 버전이 2.0 이상인 경우 ...
+# Tensor 버전 확인 >>> tf.__version__
+node1 = tf.constant(3.0, dtype=tf.float32)
+node2 = tf.constant(4.0)
+
+tf.print(node1,node2)
+#########################################
+
 # 7. Jupyter Notebook 설치
 #    > pip install jupyter
 # 8. Jupyter Notebook 구동
