@@ -1,4 +1,4 @@
-# 다중선형회귀분석 (Classification, 이진분류, sigmoid, hypothesis)
+# 로지스틱 회귀분석 (Classification, 이진분류, sigmoid, hypothesis)
 # 1장. 딥러닝을 위한 머신러닝 이해
 # 
 #    1) Classification
